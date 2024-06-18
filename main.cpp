@@ -4,14 +4,14 @@
 
 int main(void) {
 	std::string str = "alabar_a_la_alabarda";
-	Huffman huffman(str);
+	Huffman huffman;
 
-	std::string str_cod = huffman.getStringCodificada();
-	std::map<char, std::string> tabla = huffman.getTabla();
+	std::string str_cod = huffman.codificar(str);
+	std::cout << "Codificado: " << str_cod << std::endl;
+	std::cout << "Decodificado: " << huffman.decodificar(str_cod) << std::endl;
 
-	std::cout << str_cod << std::endl;
-
-	for (auto it = tabla.begin(); it != tabla.end(); ++it) {
-		std::cout << it->first << " : " << it->second << std::endl;
-	}
+	str = "abalarducha_alabardin";
+	str_cod = huffman.codificar(str);
+	std::cout << "Codificado: " << str_cod << std::endl;
+	std::cout << "Decodificado: " << huffman.decodificar(str_cod) << std::endl;
 }
