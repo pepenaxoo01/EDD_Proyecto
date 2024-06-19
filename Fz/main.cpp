@@ -5,7 +5,7 @@
 
 int main() {
     LZCompressor compressor;
-    std::string str = "tangananica-tanganana";
+    std::string str = "tangananica-tanganana ";
     std::vector<std::pair<int, int>> compressed = compressor.comprimir(str);
     
     std::cout << "Original: " << str << std::endl;
